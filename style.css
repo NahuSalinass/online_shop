@@ -16,10 +16,6 @@ body {
     min-height: 50vh;
 }
 
-.container {
-    max-width: 1040px;
-    margin: 0 auto;
-}
 
 .navbar {
     padding: 20px 0;
@@ -46,32 +42,30 @@ li a {
 
 .swiper {
     margin-top: 40px;
+    width: 295px;
+    height: 420px;
 }
 
-.swiper-slide {
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    height: 40px;
-    width: 00px;
-    position: absolute;
-}
 
 .swiper-slide img {
-    width: 295px;
     border-radius: 15px;
+    width: 295px;
     height: 420px;
 }
 
 .swiper-txt {
-    position: relative;
-    padding: 25px;
+    position: absolute;
+    padding: 30px;
 }
 
 .swiper-txt h3{
     font-size: 28px;
     margin-bottom: 5px;
     column-rule: #222222;
+}
+
+.desktop {
+    text-align: center;
+    z-index: 1;
 }
 
