@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web - Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    />
+
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
 
+<header class="header container">
     <nav class="navbar container">
         <div class="left">
             <ul>
@@ -20,113 +22,80 @@
                 <li>Hora</li>
             </ul>
         </div>
-
+        
         <div class="right">
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Servicios</a></li>
             </ul>
         </div>
     </nav>
+</header>
 
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum dolor</h3>
-                    <p>descripcion</p>
-                    <img src="images/1.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum dolor</h3>
-                    <p>descripcion</p>
-                    <img src="images/1.jpg" alt="">
-                </div>
-            </div>
-
+<section class="first-swiper">
+    <h3>Tu negocio del <span>FUTURO</span> llego a Argentina</h3>
     
-            <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum dolor</h3>
-                    <p>descripcion</p>
-                    <img src="images/1.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum dolor</h3>
-                    <p>descripcion</p>
-                    <img src="images/1.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum dolor</h3>
-                    <p>descripcion</p>
-                    <img src="images/3.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum dolor</h3>
-                    <p>descripcion</p>
-                    <img src="images/4.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum dolor</h3>
-                    <p>descripcion</p>
-                    <img src="images/5.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum dolor</h3>
-                    <p>descripcion</p>
-                    <img src="images/6.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum dolor</h3>
-                    <p>descripcion</p>
-                    <img src="images/7.jpg" alt="">
-                </div>
-            </div>
-
+    <div class="swiper swiper-hero container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/7.jpg" alt=""></div>
         </div>
-        <div class="swiper-pagination"></div>
+        
+        
+        <div class="swiper-pagination"></div> 
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
     </div>
-
+</section>
     
-
-
-    <div class="desktop">
-        <img src="images/bg.png" alt="">
-    </div>
-
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</body>
+    
+    <script>
+        const swiper = new Swiper('.swiper-hero', {
+            // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 80,
+            grabCursor: true,
+            direction: 'horizontal',
+            loop: true,
+            breakpoints: {
+                991: {
+                    slidesPerView: 3
+                }
+            },
+            //effect: 'cube',
+            autoplay: {
+                delay: '3000',
+                pauseOnMouseEnter: true,
+                disableOnInteraction: false,
+            },
+
+            // If we need pagination
+            //pagination: {
+            //    el: '.swiper-pagination',
+            //},
+
+            // Navigation arrows
+            //navigation: {
+                //nextEl: '.swiper-button-next',
+                //prevEl: '.swiper-button-prev',
+
+                //hashNavigation: {
+                //replaceState: true,
+                
+            //},
+            
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+      </script>
+    </body>
 </html>

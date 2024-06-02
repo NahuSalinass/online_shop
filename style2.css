@@ -18,8 +18,15 @@ body {
 }
 
 .container {
-    max-width: 1040px;
-    margin: 0 auto;
+    max-width: 1343px;
+}
+
+
+.header {
+    height: 640px;
+    width: 100%;
+    background: url(images/bg.jpg);
+    background-size: cover;
 }
 
 .navbar {
@@ -30,29 +37,35 @@ body {
 
 ul {
     display: flex;
+    margin: 0 20px;
 }
 
 li {
     padding: 0 20px;
     text-transform: capitalize;
-    color: #222222;
-    font-size: 18px;
+    color: #ffffff;
+    font-size: 20px;
 }
 
 li a {
-    font-size: 18px;
-    color: #222222;
+    font-size: 20px;
+    color: #ffffff;
     text-transform: capitalize;
+}
+
+.first-swiper {
+    background-color: rgba(38, 77, 206, 0.986);
 }
 
 .swiper {
     margin-top: 40px;
     width: 100%;
+    max-width: 1040px;
 }
 
 .swiper-hero {
     margin-bottom: 50px;
-    background-color: #ffffff;
+    background-color: rgba(41, 79, 202, 0.5);
     box-shadow: 0 30 30px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     position: relative;
@@ -75,6 +88,12 @@ li a {
 }
 
 @media(max-width:991px) {
+    .header {
+        width: 100%;
+        height: 230px;
+        background-size: cover;
+    }
+
     .navbar {
         padding: 30px;
     }
@@ -84,10 +103,10 @@ li a {
     }
 
     .swiper {
-        padding: 0 70px;
+        padding: 0px 30px;
     }
 
     .swiper-hero img {
-        width: 100%;
+        width: 88%;
     }
 }
