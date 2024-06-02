@@ -32,10 +32,8 @@
     </nav>
 
 
-    <div class="swiper swiper-hero">
-        <!-- Additional required wrapper -->
+    <div class="swiper swiper-hero container">
         <div class="swiper-wrapper">
-          <!-- Slides -->
           <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
           <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
           <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
@@ -43,27 +41,30 @@
           <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
           <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
           <div class="swiper-slide"><img src="images/7.jpg" alt=""></div>
-          ...
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-      
-        <!-- If we need navigation buttons -->
+
+
+        <div class="swiper-pagination"></div> 
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-      
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-      </div>
+    </div>
 
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
       <script>
         const swiper = new Swiper('.swiper-hero', {
             // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 80,
+            grabCursor: true,
             direction: 'horizontal',
             loop: true,
-            effect: 'cube',
+            breakpoints: {
+                991: {
+                    slidesPerView: 3
+                }
+            },
+            //effect: 'cube',
             autoplay: {
                 delay: '3000',
                 pauseOnMouseEnter: true,
@@ -76,19 +77,19 @@
             //},
 
             // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+            //navigation: {
+                //nextEl: '.swiper-button-next',
+                //prevEl: '.swiper-button-prev',
 
-                hashNavigation: {
-                replaceState: true,
-                 },
-            },
+                //hashNavigation: {
+                //replaceState: true,
+                
+            //},
             
             // And if we need scrollbar
-            //scrollbar: {
-              //  el: '.swiper-scrollbar',
-            //},
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
         });
       </script>
     </body>

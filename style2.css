@@ -8,12 +8,18 @@
 body {
     background: linear-gradient(
         180deg,
-        rgba(204,204,204,1) 0%,
+        rgb(160, 160, 160) 0%,
         rgba(238,238,238,1) 50%,
-        rgba(204,204,204,1) 100 
+        rgba(204,204,204,1) 100%,
+        
     );
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     min-height: 50vh;
+}
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
 }
 
 .navbar {
@@ -39,15 +45,49 @@ li a {
     text-transform: capitalize;
 }
 
-
-.swiper-hero {
-    padding: 10px;
-    width: 30%;
-    height: 100%;  
+.swiper {
+    margin-top: 40px;
+    width: 100%;
 }
 
-swiper-hero img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.swiper-hero {
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 30 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    position: relative;
+}
+
+.swiper-hero img {
+    width: 295px;
+    border-radius: 15px;
+    height: 420px;
+}
+
+.swiper-button-next{
+    display: none;
+    --swiper-navigation-size: 10px;
+}
+
+.swiper-button-prev{
+    display: none;
+    --swiper-navigation-size: 10px;
+}
+
+@media(max-width:991px) {
+    .navbar {
+        padding: 30px;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .swiper {
+        padding: 0 70px;
+    }
+
+    .swiper-hero img {
+        width: 100%;
+    }
 }
